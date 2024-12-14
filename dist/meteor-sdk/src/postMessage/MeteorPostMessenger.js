@@ -21,8 +21,8 @@ class ComWindow {
             };
             const w = constants_theme_1.SIGN_POPUP_WIDTH;
             const h = constants_theme_1.SIGN_POPUP_HEIGHT;
-            const y = window.top.outerHeight / 2 + window.top.screenY - h / 2;
-            const x = window.top.outerWidth / 2 + window.top.screenX - w / 2;
+            const y = window.outerHeight / 2 + window.screenY - h / 2;
+            const x = window.outerWidth / 2 + window.screenX - w / 2;
             const newWindow = window.open(`${baseWalletUrl}/connect/${connection.network}/${connection.actionType}?${(0, query_string_1.stringify)(queryParams)}`, "_blank", `popup=1,width=${w},height=${h},top=${y},left=${x}`);
             if (newWindow != null) {
                 this.websiteWindow = newWindow;
